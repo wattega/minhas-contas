@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR" data-fonte="grande">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#14532d">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Minhas Contas">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Minhas Contas</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="tela" aria-live="polite"></main>
+
+  <nav id="menu" aria-label="Menu principal">
+    <button data-acao="aba" data-aba="inicio"><span class="icone" aria-hidden="true">🏠</span>Início</button>
+    <button data-acao="aba" data-aba="futuro"><span class="icone" aria-hidden="true">📅</span>Futuro</button>
+    <button data-acao="aba" data-aba="historico"><span class="icone" aria-hidden="true">📖</span>Histórico</button>
+    <button data-acao="aba" data-aba="ajustes"><span class="icone" aria-hidden="true">⚙️</span>Ajustes</button>
+  </nav>
+
+  <div id="modal" data-acao="fechar-fundo" hidden></div>
+  <div id="aviso" role="status" aria-live="assertive" hidden></div>
+  <input type="file" id="arquivo" accept="application/json,.json" hidden>
+
+  <noscript><p style="padding:1rem;font-size:1.3rem">Este aplicativo precisa do JavaScript ligado no navegador.</p></noscript>
+
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
